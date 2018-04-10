@@ -8,7 +8,7 @@ How it works
 ```cs
 protected override void OnNewBlock(Peer sender, PktBroadcastNewBlock pkt)
 {
-  // Check this block is mined by alias
+  // Check the block is mined by alias
   if (badNodeAddrs.Contains(pkt.block.minerAddr) == false) return;
 
   base.OnNewBlock(sender, pkt);
